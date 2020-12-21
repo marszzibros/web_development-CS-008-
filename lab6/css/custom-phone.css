@@ -1,0 +1,34 @@
+
+figcaption{font-size:xx-small;}
+h1{font-size:Large;}
+h2{font-size:medium;}
+h3{font-size:small;}
+h4{font-size:x-small;}
+li{font-size:small;}
+p{font-size:small;}
+table a{font-size:xx-small;}
+table caption{font-size:medium;}
+td, td>p{font-size:x-small;}
+nav a{font-size: small;}
+th{
+    font-size:x-small;
+    font-family: arial;
+    font-weight: normal;
+}
+.flexbox-layout{flex-direction: column-reverse;}
+section#php{width: 80vw;}
+legend{font-size: small;}
+label{font-size: x-small;}
+input{font-size: x-small;}
+textarea{
+    font-size:x-small;
+    width: 95%;
+}
+.fluid-layout aside{width: 95%;}
+.fluid-layout footer{clear: both;}
+.fluid-layout p, .fluid-layout ol {padding: 5%;}
+.fluid-layout article{margin: 1em 0 1em 0em;}
+.fluid-layout aside + article{
+    width:95%;
+    float:none;
+}

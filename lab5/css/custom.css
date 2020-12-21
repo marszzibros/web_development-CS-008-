@@ -1,0 +1,518 @@
+:root {
+    --main-size: 1em;
+    --mainimage-width: 24em;
+    --tableimage-width: 10em;
+    --main-font: Cursive;
+    --sub-font: serif;
+    --main-color: rgba(245, 255, 224, 0.856);
+}
+
+/* link(nav) or anchor element related*/
+nav#menuLine a:link {
+    background-color:#fff;
+    color:#009;
+    text-decoration: none;
+}
+nav#menuLine a:hover {
+    color: rgb(46, 203, 255);
+    text-decoration: underline;
+}
+nav#menuLine a{
+    display: inline-block;
+    width: 12em;
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: larger;
+}
+nav#menuLine{
+    background-color: rgba(223, 223, 223, 0.699);
+    padding: 0.5%;
+}
+a[target~="_blank"]{
+    text-decoration: none;
+}
+a.source{
+    display:inline-block;
+}
+a[target~="_blank"]:hover{
+    background-color: red;
+    text-decoration: underline;
+}
+.activePage{
+    background-color: whitesmoke;
+    color: rgb(17, 0, 255);
+    border-top-left-radius: 0.5em;
+    border-top-right-radius:0.5em;
+    box-shadow:0.3em 0.3em 0.3em grey;
+}
+
+p > a:hover {
+    background-color: red;
+    text-decoration: underline;
+}
+
+/* body and html tags */
+html {
+    background-color: white;
+}
+body {
+    border: thin solid black;
+    background-image: url("../image/BGimg.jpg");
+    max-width: 65em;
+    padding: 1%;
+    margin: auto;
+    text-align:center;
+}
+
+
+
+/* image and figure related*/
+figure {
+    border :0.2em ridge lightgreen;
+    text-align:center;
+    margin: auto;
+}
+figure#explanation1, figure#explanation2{
+    padding: var(--main-size);
+    margin: 0em 1.5em 2em 1.5em;
+    background-color:var(--main-color);
+    width: 27em;
+}
+figure.left{
+    float: left;
+}
+figure.right{
+    float: right;
+}
+figcaption{
+    background-color:var(--main-color);
+    margin:auto;
+}
+img.rounded{
+    max-width: 100%;
+    border-radius: 2em;
+    border: 0.2em ridge green;
+}
+img[alt~="turtle"]{
+    width : var(--mainimage-width);
+    height: 15em;
+    padding:0.5em;
+    margin:0.5em;
+    object-fit: cover;
+}
+table img{
+    width : var(--tableimage-width);
+    padding: var(--main-size);
+    margin: auto;
+
+}
+section#sort figure{
+    width: 14em;
+}
+section#picIntroduction figcaption{
+    width : var(--mainimage-width);
+    margin: auto;
+}
+header img[alt="the earth"]{
+    max-width: 100%;
+    width: 7em;
+}
+header figure{
+    padding: 1em;
+    margin: auto;
+    width: 8em;
+}
+table figcaption{
+    margin: auto;
+    width : 14em; 
+}
+ol figure{
+    float: right;
+    width: 18em;
+}
+.flexbox-layout img {
+    width: 16em;
+    padding: 0.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+ol figcaption{
+    margin: auto;
+}
+section#php figure{
+    width: 18em;
+}
+section#php img {
+    padding: 0.5em;
+    width: 14em;
+}
+section#php figcaption{
+    margin: auto;
+}
+
+
+
+/* table related */
+table{
+    width: 80%;
+    margin:auto;
+    border-collapse: collapse;
+    border: 0.3em ridge olivedrab !important;
+}
+caption {
+    font-family: var(--main-font);
+    font-size: 1.6em;
+    background-color: whitesmoke;
+}
+section#sort td{
+    margin: auto;
+}
+td {
+    border: 0.3em ridge red;
+    font-family: var(--sub-font);
+}
+th {
+    background-color: lightgray;
+    border: 0.3em ridge olivedrab !important;
+    font-family: var(--main-font);
+}
+tr.rowOdd {
+    background-color: rgba(164, 164, 216, 0.863);
+}
+tr.rowEven {
+    background-color: rgba(216, 174, 164, 0.87);
+}
+
+
+
+
+/* paragraph related */
+p{
+    text-align:left;
+}
+p#intro {
+    padding: 0.5em;
+    margin : 0.5em;
+}
+p.main{
+    font-family: var(--sub-font);
+    background-color:var(--main-color);
+    line-height: 120%;
+    text-indent: 3em;
+    text-align: left;
+    padding: 1em;
+}
+p.source {
+    background-color:var(--main-color);
+    display: inline;
+}
+footer a{
+    font-family: var(--sub-font);
+    color: white;
+}
+
+/* header related*/
+h1{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+h1, h2, h3, h4{
+    background-color: yellowgreen;
+    font-family: var(--main-font);
+    display: inline;
+}
+
+/*list related*/
+li {
+    text-align: left;
+}
+li.oddList{
+    background-color:rgba(240, 128, 128, 0.829);
+}
+li.evenList{
+    background-color:rgba(144, 238, 144, 0.74);
+}
+
+
+
+
+/* etc...*/
+cite {
+    font-size:xx-small;
+}
+mark {
+    background-color: yellow;
+}
+fieldset{
+    background-color: rgba(230, 230, 219, 0.904);
+    width: 25em;
+    margin:auto;
+    text-align: left;
+}
+main{
+    margin:auto;
+}
+#youtube {
+    margin: auto;
+    padding: 3%;
+    background: radial-gradient(rgb(3, 168, 3) 50%,rgb(255, 255, 255));
+}
+iframe{
+    margin: 1em auto 0.5em auto;
+    display: block;
+}
+footer{
+    background-color: black;
+}
+label {
+    background-color: var(--main-color);
+}
+section#php{
+    width: 20em;
+    margin:auto;
+    background-color:var(--main-color);
+}
+
+
+/* detail.php flexbox-layout*/
+.flexbox-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.flexbox-layout .main{
+    flex: 0 1 65%;
+}
+.flexbox-layout figure{
+    flex: 0 1 35%
+}
+
+/* index.php flex-layout*/
+#picIntroduction{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+#explanation1{
+    flex: 0 1 50%;
+}
+#explanation2{
+    flex: 0 1 50%;
+}
+
+/* index.php grid-layout */
+.grid-layout{
+    display: grid;
+    width:40em;
+    grid-template-columns: auto auto auto auto;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: thin solid black;
+    background-color: var(--main-color);
+}
+.grid-layout #orgType_nonprofit{ 
+    grid-row: 2/4; 
+    grid-column: 1/2;
+}
+.grid-layout #orgType_profit{ 
+    grid-row: 4/5; 
+    grid-column: 1/2;
+}
+
+.grid-layout #ARC {
+    grid-row: 2/3; 
+    grid-column: 2/3;
+}
+.grid-layout #Alabama {
+    grid-row: 2/3; 
+    grid-column: 3/4;
+}
+.grid-layout #ARCinfo {
+    grid-row:2/3;
+    grid-column: 4/5;
+}
+
+.grid-layout #NRC {
+    grid-row: 3/4; 
+    grid-column: 2/3;
+}
+.grid-layout #Vermont {
+    grid-row: 3/4; 
+    grid-column: 3/4;
+}
+.grid-layout #NRCinfo {
+    grid-row:3/4;
+    grid-column: 4/5;
+}
+
+.grid-layout #AOR {
+    grid-row: 4/5; 
+    grid-column: 2/3;
+}
+.grid-layout #Ohio {
+    grid-row: 4/5; 
+    grid-column: 3/4;
+}
+.grid-layout #AORinfo {
+    grid-row:4/5;
+    grid-column: 4/5;
+}
+
+/* styling the form.php*/
+/* first name, last name, email, phone number*/
+.require{
+    text-shadow: 0 0 0.2em rgba(255, 37, 37, 0.678);
+    font-size: 1.3em;
+}
+input[name^="txt"]{
+    text-shadow: 0 0 0.2em rgba(255, 37, 37, 0.678);
+    box-shadow: 0.2em 0.2em 0.2em rgba(255, 152, 152, 0.678);
+    border-radius: 40px 20px;
+    border: thick solid blueviolet;
+}
+
+/* radio box */
+input[name^="rad"]{
+    box-shadow: 0 0 0.5em rgba(116, 116, 116, 0.678);
+}
+label[for^="rad"]{
+    text-shadow: 0 0 0.2em rgba(255, 37, 37, 0.678);
+    font-size: 1.3em;
+}
+/* textarea */
+textarea {
+    box-shadow: 0 0 1em rgba(116, 116, 116, 0.678);
+    text-shadow: 0 0 0.2em rgba(255, 37, 37, 0.678);
+}
+/* check box */
+input[name^="chk"]{
+    box-shadow: 0 0 0.5em rgba(116, 116, 116, 0.678);
+}
+label[for^="chk"]{
+    text-shadow: 0 0 0.2em rgba(255, 37, 37, 0.678);
+    font-size: 1.3em;
+}
+
+/*list box */
+select[name^="lst"]{
+    box-shadow: 0 0 2em rgba(255, 37, 37, 0.678);
+}
+label[for^="lst"]{
+    text-shadow: 0 0 0.2em rgba(255, 37, 37, 0.678);
+    font-size: 1.3em;
+}
+
+/* submit button */
+input[type=submit]{
+    border: thin solid darkgreen;
+    border-radius: 2em;
+    background-color: rgb(200, 255, 200);
+    height: 4em;
+    width: 19em;
+    font-size: 1.3em;
+    color: rgb(0, 0, 0);
+}
+
+/* animation */
+body{
+    position: static;
+}
+.animation1 img{
+    width: 7em;
+    height: 5em;
+}
+.animation1 figcaption{width:11em;}
+.animation1{
+    border: none;
+    position: absolute;
+    animation: turtleMove1 2s linear 1s infinite normal;
+}
+@keyframes turtleMove1{
+    from {left: 55%; top: 0em;}
+    to{left: 85%; top: 0em;}
+}
+.animation2 img{
+    width: 7em;
+    height: 5em;
+}
+.animation2 figcaption{width:11em;}
+.animation2{
+    border: none;
+    position: absolute;
+    animation: turtleMove2 2s linear 1s infinite normal;
+}
+@keyframes turtleMove2{
+    from {right: 55%; top: 0em;}
+    to{right: 85%; top: 0em;}
+}
+
+/* transition */
+img[alt="the earth"]:hover{
+    transform: scale(1.1, 1.1);
+}
+img[alt="the earth"]:active{
+    transform: rotate(180deg);
+    background-color: red;
+}
+.animation1:hover,.animation2:hover{
+    transform: scale(1.1, 1.1);
+}
+.animation1:active,.animation2:active{
+    background-color: red;
+}
+
+
+.fluid-layout nav a {
+    display: inline-block;
+    width: 24%;
+    line-height: 2em;
+    background-color: rgb(255, 255, 196);
+}
+
+.fluid-layout aside{
+    width: 25%;
+    float: left;
+    border: 0.4em outset greenyellow;
+    background-color: yellow;
+}
+
+.fluid-layout aside + article{         
+    width: 70%;
+    float: right;
+}
+.fluid-layout article
+{
+    border: 0.4em outset greenyellow;
+    background-color: rgb(86, 193, 255);
+}
+.fluid-layout footer{
+    clear: both;
+}
+body.fluid-layout{
+    border: thin solid black;
+    background-image: url("../image/BGimg.jpg");
+    max-width: 65em;
+    padding: 1%;
+}
+.fluid-layout p, .fluid-layout ol {
+    text-align: left;
+    padding: 2%;
+    background-color: rgba(255, 255, 214, 0.514);
+}
+.fluid-layout figure{
+    padding: 3%;
+    width: 90%;
+}
+.fluid-layout figure img{
+    margin: 0.2%;
+    padding: 0.2%;
+    max-width: 100%;
+    border-radius: 2em;
+    border: 0.1em ridge green;
+}
+
+/* center deactivated */
+li, p, form{
+    text-align: left;
+}

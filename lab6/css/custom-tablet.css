@@ -1,0 +1,51 @@
+body{ width:97vw;}
+.grid-layout{grid-template-areas:"heading" "text" "picture" "table" "conclusion";}
+figure{border:none;}
+nav a{font-size: small;}
+.grid-layout-body #menuLine{
+    grid-template-columns: 48.5% 48.5%;
+    justify-content: space-evenly;
+    grid-template-areas: "a1 a2" "a3 a4";
+}
+#menuLine a{margin:1%;}
+.grid-layout #picIntroduction{
+    display: flex;
+    flex-direction: row;
+}
+#picIntroduction .left{
+    width: 45vw;
+    padding: 0.5vw;
+    margin:2vw;
+    flex: 50%;
+}
+#picIntroduction .left .rounded{border-radius: 0;}
+article{margin:0;}
+#picIntroduction .right{
+    width: 45vw;
+    padding: 0.5vw;
+    margin:2vw;    
+    flex: 50%;
+}
+#picIntroduction .right .rounded{border-radius: 0;}
+header figure {width:20vw;}
+img{border-radius:0;}
+
+legend{font-size: medium;}
+label{font-size: small;}
+input{font-size: small;}
+figcaption{font-size:x-small;}
+h1{font-size:x-large;}
+h2{font-size:large;}
+h3{font-size:medium;}
+h4{font-size:small;}
+p{font-size:medium;}
+li{font-size:medium;}
+table a{font-size:x-small;}
+table caption{font-size:large;}
+ol, ul{padding-left:1.2em;}
+td, td>p{font-size:small;}
+nav a{font-size: medium;}
+table{width: 100%;}
+.flexbox-layout{flex-direction: column;}
+.flexbox-layout figure{width: 70vw;}
+li.evenList{margin-top:1em;}

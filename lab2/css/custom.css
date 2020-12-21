@@ -1,0 +1,28 @@
+figure{
+    float: center;
+    width: 25em;
+}
+img{
+    max-width: 100%;
+}
+table{
+    width: 60em;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th {
+    background-color: lightgray;
+}
+caption{
+    font-size: 20px;
+}
+h1{
+    font-size: 35px;
+}
+mark {
+    background-color: yellow;
+}
+p {
+    width: 60em;
+}
