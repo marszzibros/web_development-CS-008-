@@ -1,0 +1,87 @@
+main{max-width: 95%;}
+footer{max-width: 95%;}
+body{max-width: 93vw;}
+nav#menuLine
+{
+    grid-template-columns: 45% 45%;
+    grid-gap:0.5em 0;
+    grid-template-areas: 
+    "home routine"
+    "recorder runner";
+}
+figure.top{max-width: 12em;}
+h1{font-size:x-large;}
+article.fluid_layout
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap:0.5em 0;
+    grid-template-areas: "firstTitle" "welcome" "features";
+}
+h2#firstTitle{grid-area:firstTitle;}
+#welcome{grid-area:welcome;}
+#features{grid-area:features}
+.fluid_layout #welcome{
+    float:none;
+    width: 100%;
+    padding: 0.3em;
+}
+.fluid_layout #welcome + #features{
+    float:none;
+    width: 100%;
+    padding: 0.3em;
+}
+cite{font-size:x-small;}
+footer li{font-size: small;}
+aside#helpList{
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "Gtitle"
+    "goto" 
+    "Ctitle"
+    "contact" ;
+}
+p, li{font-size:0.9em;}
+p#toMySite{font-size:0.5em;}
+h2{font-size:1.3em;}
+h3{font-size:1.15em;}
+figcaption{font-size:0.8em;}
+.Jay_image{max-width: 100%;}
+.backButton{font-size: 0.8em;}
+input[type^="text"], input[type^="email"]{max-width: 50%;}
+p.message{font-size:0.8em;}
+section#registration {max-width: 85%;}
+nav#readOrwrite a, input[type^="submit"]{font-size: 0.9em;}
+#frmTable{
+    grid-template-columns: auto auto;
+    grid-template-areas: "submitID radioparts" "Periods Periods" "submit submit";
+}
+#frmRecord fieldset{
+    margin: auto;
+    margin-bottom: 0.5em;
+    max-width: 85%;
+}
+#recording{
+    grid-template-areas:
+        "recordHead recordHead"
+        "IDandPart IDandPart"
+        "Routines Routines";
+    grid-gap: 1em 0;
+}
+input#txtIDSearch{margin: 0.3em;}
+#weather_info{
+    flex-direction: column;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+#weather_image{flex: 0 1 auto;}
+#weather_description{flex: 0 1 auto;}
+#zipcodeInput{
+    grid-template-columns: 90%;
+    grid-template-areas: "prompt_title" "zipcode" "weather";
+}
+input#txtZipcode{max-width:45%;}
+nav#menuLine a{font-size: 0.8em;}
+#detail section[id^="exercise"]{
+    max-width: 90%;
+}

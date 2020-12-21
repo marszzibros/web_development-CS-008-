@@ -1,0 +1,576 @@
+:root {
+    --main-font: "Courier New", Courier, monospace;
+    --main-line: 0.2em ridge rgb(236, 216, 33);
+}
+body{
+    max-width: 85vw;
+    margin:auto;
+}
+h1 {
+    letter-spacing:0.2em;
+    font-family: serif;
+    margin: auto;
+    text-shadow: 0 0 0.4em rgb(255, 229, 190);
+    text-align:center;
+}
+main{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding:0.5em;
+    max-width: 90%;
+}
+h2, h3, h4{
+    font-family:var(--main-font);
+    margin:auto;
+    text-align: center;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+#exercise_benefits p{padding-left: 1em;}
+#welcome p{padding: 0 1em 0 1em;}
+section{
+    background-color:rgb(230, 230, 230);
+    box-shadow: 0 0 0.5em 0.5em blanchedalmond;
+    border: var(--main-line);
+    border-radius: 15px;
+}
+cite{font-size:small;}
+.routine_display_grid p{
+    display:inline;
+    margin: auto;
+}
+.paragraph{
+    line-height: 1.5em;
+    font-family: var(--main-font);
+    font-weight: bold;
+    color:rgb(109, 109, 109);
+}
+em{
+    background-color: yellow;
+    font-weight:bold;
+} 
+strong{text-shadow: 0 0 0.4em rgb(255, 229, 190);}
+/* img related*/
+figure{
+    padding: 0.5em;
+    text-align: center;
+    margin: auto;
+}
+figure.top{
+    margin:auto;
+    max-width: 16em;
+}
+img{max-width:100%;}
+#exercise_pics figure{
+    padding:0;
+    margin: 0;
+}
+li{
+    margin: 0.5em;
+    font-family: var(--main-font);
+    font-weight: bold;
+    color:rgb(82, 82, 82);
+}
+.routine_steps li a{
+    text-decoration:none;
+    color: gray;
+}
+/* grid-layout for body element */
+.grid-layout-body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 1em 0;
+    grid-template-areas:
+    "header" "nav" "main" "footer";
+}
+body.grid-layout-body header{grid-area: header;}
+body.grid-layout-body nav{grid-area: nav;}
+body.grid-layout-body main{grid-area: main;}
+body.grid-layout-body footer {
+    grid-area: footer;
+    max-width: 90%;
+    margin:auto;
+    text-decoration: none;
+    font-family: var(--main-font);
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing:0.1em;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+#weather_analysis{margin-top: 1em;}
+#weather_analysis p.message {
+    margin-right: 0.5em;
+    margin-left: 1em;
+}
+
+/* nav layout */
+nav{
+    width: 90%;
+    margin:auto;
+}
+#menuLine a{
+    border-top: var(--main-line);
+    border-bottom: var(--main-line);
+    padding: 0.5em;
+    text-align: center;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    font-family: var(--main-font);
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing:0.1em;
+}
+#menuLine a:hover{
+    transform: scale(1.05, 1.05);
+    cursor: pointer;
+}
+#menuLine{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-areas: "home routine recorder runner";
+}
+
+#menuLine a[href^="index"]{grid-area: home;}
+#menuLine a[href^="detail"]{grid-area: routine;}
+#menuLine a[href^="form"]{grid-area: recorder;}
+#menuLine a[href^="extra"]{grid-area: runner;}
+#menuLine a.activePage{
+    border-top: 0.2em ridge rgb(255, 208, 0);
+    border-bottom: 0.2em ridge rgb(255, 208, 0);
+    background: radial-gradient(rgb(250, 250, 250), rgb(221, 221, 221));
+}
+/* fluid-layout */
+.fluid_layout #welcome{
+    float:left;
+    width: 60%;
+    padding: 0.3em;
+}
+.fluid_layout #welcome + #features{
+    float:right;
+    width: 30%;
+    padding: 0.3em;
+}
+aside section{margin-bottom: 5%;}
+
+
+/* exercise pics */
+.pic_organizer{
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+#weight_lifting_squats, #cardio_running, #weight_lifting_deadlift{flex: 0 1 30%;}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 100%;
+    align-content: space-between;
+    grid-template-areas: "article" "pics";
+    grid-gap: 2em 0;
+}
+article#fluid_layout{grid-area: article;}
+section#exercise_pics{grid-area: pics;}
+
+
+section article{
+    max-width: 50em;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-gap: 2%;
+    align-content: space-around;
+    justify-content: space-around;
+    grid-template-areas: 
+    "explanation" "exercise" "articleHeader";
+}
+article h4{grid-area: articleHeader;}
+article{
+    max-width: 50em;
+    margin:auto;
+}
+article+section{
+    max-width: 90%;
+    margin: auto;
+}
+#explanation_leg, #explanation_chest, #explanation_back{
+    max-width:100%;
+    grid-area: explanation;
+    border:none;
+    box-shadow: none;
+}
+.Jay_image{
+    grid-area: exercise;
+    transition: transform 0.5s, box-shadow 2s;
+    max-width: 70%;
+    padding:0;
+    margin:auto;
+}
+.Jay_image:hover{
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 0 1em 1em rgb(236, 216, 33);
+}
+#detail section[id^="exercise"]{
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    max-width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.routine_display_grid{
+    padding-bottom: 1em;
+    margin-bottom:2em;
+    display: grid;
+    grid-template-columns: auto 75% auto;
+    grid-gap: 1.5em;
+    grid-template-areas: 
+    ". routine_header ." 
+    ". video ."
+    ". source ."
+    "steps steps steps";
+}
+.routine_display_grid h3{grid-area: routine_header;}
+
+/* Source: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp 
+How to make the iframe responsible*/
+p.video_container{
+    grid-area: video;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 60%;
+}
+.routine_display_grid iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+p.source{grid-area: source;}
+.routine_display_grid .routine_steps{
+    grid-area: steps;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    box-shadow: none;
+    margin:auto;
+}
+
+
+/* registration */
+section#registration{
+    display: grid;
+    max-width: 75%;
+    margin: auto;
+}
+form#frmRegister{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-template-areas: 
+    "basic_info additional" 
+    "register register";
+    justify-content: space-evenly;
+}
+#basic_info{grid-area: basic_info; }
+#additional{grid-area: additional;}
+#submitbutton{
+    grid-area: register;
+    border:none;
+}
+input[type="submit"]{
+    display: block;
+    margin: auto;
+    height: 2em;
+    background-color: rgb(240, 240, 240);
+    font-family: var(--main-font);
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing:0.1em;
+    border: 0.1em solid black;
+}
+fieldset{background-color: rgb(219, 219, 219);}
+fieldset#submitbutton{background-color:rgba(0,0,0,0);}
+fieldset#submitIDandPeriods{background-color:rgba(0,0,0,0);}
+
+/* choosing option button space*/
+.chooseOption{
+    margin-top:1em;
+    max-width: 75%;
+    margin: auto;
+}
+.chooseOption nav{
+    width: 90%;
+    margin:auto;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}
+#readOrwrite a,input[type="submit"],.backButton{
+    padding: 0.5em;
+    text-align: center;
+    color: rgb(41, 41, 41);
+    background-color: rgb(240, 240, 240);
+    text-decoration: none;
+    font-family: var(--main-font);
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing:0.1em;
+    border: 0.1em solid black;
+}
+#readOrwrite a:hover, input[type="submit"]:hover{
+    transform: scale(1.05, 1.05);
+    cursor: pointer;
+}
+#readOrwrite{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 45% 45%;
+    grid-template-areas: "create record";
+}
+#readOrwrite a[href^="create"]{grid-area: create;}
+#readOrwrite a[href^="record"]{grid-area: record;}
+
+/* createTable.php */
+#frmTable{
+    display:grid;
+    grid-template-columns: 32% 62%;
+    justify-content: space-evenly;
+    grid-gap:0.5em 0.5em;
+    grid-template-areas: "submitID Periods" "radioparts Periods" "submit submit";
+    margin: 0.5em;
+}
+#txtIDsubmit{max-width: 35%;}
+#IDsubmit{grid-area:submitID;}
+#startDate{flex:0 1 50%;}
+#endDate{flex:0 1 50%;}
+#SortMethods{
+    grid-area:Periods;
+    display: flex;
+    flex-direction: row;
+}
+#radioParts{grid-area: radioparts;}
+#submitIDandPeriods{
+    grid-area:submit;
+    border:none;
+}
+
+label{margin-left:0.7em;}
+
+/* message */
+p.message{
+    font-family:var(--main-font);
+    font-weight:bold;
+    font-size:medium;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+aside.confirm_message{
+    border: 0.2em double gray;
+    background-color:rgb(230, 230, 230);
+    margin-top:1em;
+    margin-bottom:1em;
+    border-radius: 15px;
+    max-width: 75%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.confirm_message ol{margin-top:0.5em;}
+.indent{text-indent:1em;}
+
+
+/* runner */
+#zipcodeInput{
+    display: grid;
+    grid-template-columns: 38% 55%;
+    justify-content: space-around;
+    padding-bottom: 0.5em;
+    grid-template-areas: "prompt_title prompt_title" "zipcode weather";
+    grid-gap:0.5em 0.5em;
+}
+#zipcode{background-color:white;}
+#zipcodeInput h3{grid-area: prompt_title;}
+#frmGetWeather{grid-area: zipcode;}
+#weather_info{
+    display: flex;
+    max-width: 95%;
+    grid-area: weather;
+    background-color: white;
+}
+#weather_image{
+    flex: 0 1 30%;
+    margin:0.2em;
+    border: 0.1em solid black;
+}
+#weather_description{
+    flex: 0 70%;
+    border: 0.1em solid black;
+    margin:0.2em;
+}
+#weather_description p{
+    font-family:var(--main-font);
+    margin:auto;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+section#weather_info{
+    border: 0.2em solid black;
+    background-color:white;
+}
+input#txtZipcode{max-width:45%;}
+#btnGetWeather{max-width:50%;}
+
+
+.error_message{background-color: white;}
+
+/* record exercise */
+#recording{
+    display: grid;
+    grid-template-columns: 40% 55%;
+    justify-content: space-around;
+    grid-template-areas:
+    "recordHead recordHead"
+    "IDandPart Routines"
+    "DBresults DBresults";
+}
+#recording h2{grid-area:recordHead;}
+#IDandPart{grid-area:IDandPart;}
+#Routines{grid-area:Routines;}
+#DBresults{grid-area:DBresults;}
+#frmRecord fieldset{
+    padding:0.5em;
+    margin: 0.5em;
+    border:none;
+    max-width: 90%;
+}
+#txtIDSearch{max-width:50%;}
+fieldset p{
+    padding: 0.1em;
+}
+#frmDetailRecord{
+    display: grid;
+    max-width:98%;
+    margin:auto;
+    grid-template-columns: 70% 28%;
+    padding:0.3em;
+    grid-gap: 0.2em 0.2em;
+    justify-content: space-around;
+    grid-template-areas: 
+    "exer_name reps"
+    "sets sets";
+}
+#ExerciseCheck{
+    grid-area: exer_name;
+    padding: 0.1em;
+}
+#ExerciseReps{grid-area: reps;}
+#ExerciseSets{grid-area: sets;}
+fieldset{
+    margin:0.15em;
+    padding: 0.2em;
+}
+#txtWeight
+{
+    max-width:1.5em;
+}
+
+
+/* create table- table */
+#tableGenerator{margin-top: 1em;}
+table{
+    width: 80%;
+    margin:auto;
+    border-collapse: collapse;
+    margin-top:1em;
+    margin-bottom: 1em;
+    border: 0.2em ridge rgb(236, 216, 33);
+}
+th {
+    background-color: rgb(172, 172, 172);
+    border: 0.1em solid rgb(99, 99, 99);
+}
+td {
+    border: 0.1em solid rgb(99, 99, 99);
+    font-family: var(--sub-font);
+}
+tr:hover{
+    background-color: rgb(255, 255, 183);
+    cursor: pointer;
+}
+tr:nth-child(odd){background-color:rgb(238, 238, 238)}
+tr:nth-child(even){background-color:rgb(211, 211, 211)}
+
+
+
+/* footer */
+#sponsor{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    border-top: 0.2em solid gray;
+    border-bottom: 0.2em solid gray;
+    background-color: rgb(221, 221, 221);
+    margin-bottom: 0.5em;
+}
+#sponsor figure#UVM{flex: 0 1 33%;}
+#sponsor figure#UVMREC{flex: 0 1 33%;}
+#sponsor figure#CSwebDev{flex: 0 1 34%;}
+
+#footerGrid aside{max-width: 90%;}
+#helpList ul{
+    list-style-type: none;
+    text-align: left;
+}
+p#toMySite{
+    float:left;
+    margin-left: 5%;
+}
+#helpList li{
+    border-bottom: 0.08em solid gray;
+}
+li img{margin-top:0.1em;}
+
+#footerGrid li a{
+    text-decoration:none;
+    color: white;
+}
+li a:hover{
+    background: gray;
+    color: rgb(255, 241, 112);
+}
+ul{display:inline-block;}
+.backButton{
+    margin:0.5em;
+    display: inline-block;
+}
+.backButton:hover
+{
+    transform: scale(1.05, 1.05);
+    cursor: pointer;
+}
+#helpList{
+    margin:auto;
+    display: grid;
+    grid-template-columns: 48% 45%;
+    max-width: 80%;
+    justify-content: space-around;
+    grid-template-areas:
+    "Ctitle Gtitle" 
+    "contact goto";
+    background-color: rgb(97, 97, 97);
+}
+#contactTitle{grid-area: Ctitle;}
+#gotoTitle{grid-area: Gtitle;}
+#contact{grid-area: contact;}
+#goto{grid-area:goto;}
+#helpList h3{color:white;}
+#helpList #contact li{
+    color:rgb(228, 228, 228);
+    padding-bottom: 0.4em;
+}

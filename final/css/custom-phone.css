@@ -1,0 +1,58 @@
+body{max-width: 95vw;}
+form#frmRegister{
+    grid-template-columns: 95%;
+    grid-template-areas: 
+    "basic_info"
+    "additional" 
+    "register";
+    justify-content: space-evenly;
+}
+#recording{
+    grid-template-areas:
+        "recordHead recordHead"
+        "IDandPart IDandPart"
+        "Routines Routines"
+        "DBresults DBresults";
+    grid-gap: 1em 0;
+}
+nav#menuLine a{font-size: 0.8em;}
+h2{font-size:1.1em;}
+h3{font-size:0.9em;}
+aside.pic_organizer{
+    flex-direction: column;
+    max-width: 90%;
+    margin: auto;
+}
+ol{
+    margin: auto;
+    padding-left: 7%;
+}
+.routine_steps li {font-size: 1em;}
+.routine_steps li a{
+    font-size: 0.8em;
+}
+section[id^="exercise"] article
+{
+    grid-template-areas:
+    "exercise"
+    "articleHeader"
+    "explanation";
+}
+#detail section[id^="exercise"]{
+    max-width: 95%;
+}
+h4{font-size:0.7em;}
+#sponsor{flex-direction: column;}
+#sponsor figure{border: 0.1em solid gold;}
+#readOrwrite{font-size: 0.8em;}
+#SortMethods{flex-direction: column;}
+#frmTable {
+    grid-template-columns: auto;
+    grid-template-areas:
+        "submitID"
+        "radioparts"
+        "Periods"
+        "submit";
+}
+table th{font-size: 0.7em;}
+table td{font-size: 0.8em;}
